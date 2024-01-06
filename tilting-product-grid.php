@@ -12,7 +12,11 @@ function tilting_product_grid_enqueue_scripts() {
     wp_enqueue_script('tilting-product-grid-script', plugin_dir_url(__FILE__) . 'script.js', array('vanilla-tilt', 'jquery'), '1.0', true);
 
     // Enqueue styles
-    wp_enqueue_style('tailwind-css', 'https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.8.13/tailwind.min.css', array(), '1.8.13');
+	
+wp_enqueue_style('tailwind-css', plugin_dir_url(__FILE__) . 'tailwind.css', array(), '1.8.13');
+
+
+	
     wp_enqueue_style('tilting-product-grid-style', plugin_dir_url(__FILE__) . 'style.css', array('tailwind-css'), '1.0');
 }
 
